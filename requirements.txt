@@ -18,5 +18,6 @@ PyYAML
 numpy
 scikit-learn
 apache-airflow
--e . #to trigger the 'setup.py' file, this line of code is needed. Idea behind this is that, when requirements.txt is called, it will automatically call setup.py file & convert our entire source code into library format w/o explicitly need of calling that
-     # . means current directory & e means editable installation, we are editing setup.py
+-e . 
+#to trigger the 'setup.py' file, this line of code is needed. Idea behind this is that, when requirements.txt is called, it will automatically call setup.py file & convert our entire source code into library format w/o explicitly need of calling that
+# . means current directory & e means editable installation, we are editing setup.py
