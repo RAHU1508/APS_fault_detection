@@ -6,7 +6,7 @@ imblearn==0.0
 mypy-boto3-s3==1.24.76
 pip-chill==1.0.1
 pymongo==4.2.0
-python-dotenv==0.21.0
+python-dotenv==0.21.0   #this function is needed in order to read the .env file & make it available as the environment variable
 types-s3transfer==0.6.0.post4
 uvicorn==0.18.3
 watchfiles==0.17.0
