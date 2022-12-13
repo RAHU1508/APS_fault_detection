@@ -1,4 +1,4 @@
-from setuptools import find_packages, setup
+from setuptools import find_packages,setup
 from typing import List
 
 #listing down all the installable library names from requirements.txt file to requirement_list 
@@ -20,5 +20,5 @@ setup(
     author = "rahulkumar",
     author_email = "rsk.150896@gmail.com",
     packages = find_packages(), #__init__.py file should be there in our 'sensor' folder in order for find_packages() to identify which source code to convert into library format
-    install_requires = get_requirements(), #get_requirements() function is needed for other libraries required for this project
+    #install_requires = get_requirements(), #get_requirements() function is needed for other libraries required for this project
 )
