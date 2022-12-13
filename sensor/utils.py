@@ -1,7 +1,7 @@
 #creating dataframe from the dataset fetched from mongodb. This is one helper function. 
 
 import pandas as pd
-from sensor.config import mongo_client
+from sensor.config import mongo_client  #mongo_client is created as the environment variable which is holding the url of mongodb from where data is needed to be fetched. see config.py
 from sensor.logger import logging
 from sensor.exception import SensorException
 import os, sys
