@@ -28,3 +28,24 @@ def get_collection_as_dataframe(database_name:str, collection_name:str) -> pd.Da
         return df
     except Exception as e:
         raise SensorException(e, sys)
+
+
+#function to create yaml files for report generation
+def write_yaml_file(file_path,data:dict):
+    try:
+        file_dir = os.path.dirname(file_path) #get the path
+        os.makedirs(file_dir,exist_ok=True) #make directory
+        with open(file_path,"w") as file_writer:
+            yaml.dump(data,file_writer) #using file_writer, all the data will be written to given file path
+    except Exception as e:
+        raise SensorException(e, sys)
+
+#function to convert columns to float
+def convert_columns_float(df:pd.DataFrame,exclude_columns:list)->pd.DataFrame:
+    try:
+        for column in df.columns:
+            if column not in exclude_columns:
+                df[column]=df[column].astype('float')
+        return df
+    except Exception as e:
+        raise e
